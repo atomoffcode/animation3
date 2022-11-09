@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+}
+.car img{
+    width: 100%;
+
+}
+.car{
+    z-index: 1;
+    width: 950px;
+    bottom: 210px;
+    right: 470px;
+    transform: rotateY(180deg) rotateZ(0.5deg);
+    position: absolute;
+    animation: lift 5s ease-out 1;
+
+
+}
+.wheels img{
+    width: 100%;
+}
+.wheels{
+    width: 170px;
+    position: absolute;
+    
+
+}
+.smoke{
+    z-index: 2;
+    position: absolute;
+    bottom:210px;
+    right: 80px;
+    transform: rotateY(180deg);
+}
+#first{
+    scale: 1.7;
+    bottom:220px;
+    right: 205px;
+    opacity: 0;
+    animation: smoking1 3s ease-in 1;
+}
+#second{
+    opacity: 0;
+    animation: smoking2 4s ease-out 1;
+
+}
+@keyframes smoking1{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes smoking2{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#rear{
+    bottom: 245px;
+    right: 553px;
+    animation: driver 5s linear 1;
+}
+#front{
+    bottom:245px;
+    right: 1135px;
+    animation: drivef 5s ease-in 1;
+}
+
+@keyframes driver{
+    from{
+        transform: rotateZ(9000deg);
+    }
+}
+
+@keyframes drivef{
+    from{
+        transform: rotateZ(7200deg);
+    }
+}
+@keyframes lift{
+    0%{
+        transform: rotateY(180deg) rotateZ(0.5deg);
+    }
+    10%{
+        transform: rotateY(180deg) rotateZ(-1deg);
+    }
+    100%{
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+}
+
+
+
+
